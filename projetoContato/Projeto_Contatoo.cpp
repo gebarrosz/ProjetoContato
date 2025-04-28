@@ -74,14 +74,11 @@ int main() {
 
         cout << "Nome: ";
         getline(cin, nome);
-
         cout << "Email: ";
         getline(cin, email);
-
         cout << "Telefone: ";
         getline(cin, telefone);
 
-        // Validação do dia
         do {
             cout << "Dia de nascimento (1 a 31): ";
             cin >> dia;
@@ -90,7 +87,6 @@ int main() {
             }
         } while (dia < 1 || dia > 31);
 
-        // Validação do mês
         do {
             cout << "Mes de nascimento (1 a 12): ";
             cin >> mes;
@@ -105,7 +101,6 @@ int main() {
 
         Data nascimento(dia, mes, ano);
         contatos[i] = Contato(nome, email, telefone, nascimento);
-
         cout << endl;
     }
 
